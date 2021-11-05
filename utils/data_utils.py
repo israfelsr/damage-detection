@@ -1,10 +1,8 @@
-import os
 import scipy.io as sio
 import numpy as np
 
 from sklearn.model_selection import train_test_split
 ROOT = 'project/'
-
 
 def load_data(filename):
     datadic = sio.loadmat(filename)
