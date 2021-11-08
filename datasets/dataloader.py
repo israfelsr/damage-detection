@@ -19,13 +19,13 @@ class MaterialData(Dataset):
     def __len__(self):
         return len(self.imgs)
 
-    def __get__(self, index):
+    def __getitem__(self, index):
         img = self.imgs[index,:,:]
         img = np.repeat(img[:,:,np.newaxis], 3, axis=2)
         mask = self.masks[index,:,:]
         img = self.tfrm(img)
         mask = self.tfrm(mask)
-        return img, mask
+        return {"X" : img, "y" : mask}
 
 def load_datasets():
     filename = 'datasets/Deltas3.mat'
