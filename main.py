@@ -43,20 +43,16 @@ if __name__ == '__main__':
     print("len test data:", len(dataloaders["test"]))
     
     # Testing Model
-    #model = FCN()
-    #x_dummy = torch.zeros((8, 3, 51, 71))
-    #output_dummy = model(x_dummy)
-    #print("output shape of the model:",output_dummy["out"].shape)
     
     # Testing Metrics
     iou = IoUMetric()
     #sample = dataloaders["train"]
-    #for t, batch in enumerate(dataloaders["train"]):
-    #    x = batch["X"]
-    #    y = batch["y"]
-    #    print(y.shape)
-    #    print(iot.update(y, y))
-    #    if t == 0: break
+    for t, batch in enumerate(dataloaders["train"]):
+        x = batch["X"]
+        print("x", x.shape)
+        y = batch["y"]
+        print(y.shape)
+        if t == 0: break
 
     a = torch.tensor(np.random.rand(3,4))
     b = torch.tensor([[0, 1, 0, 0],[0,1,0,1], [0, 0, 0, 1]], dtype=torch.int8)
