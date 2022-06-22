@@ -5,7 +5,7 @@ jupyter-console==6.0.0
 jupyter-core==4.4.0
 jupyterlab==1.2.21
 jupyterlab-server==0.2.0
-numpy==1.16.2
+numpy==1.22.0
 ipykernel==5.1.0
 ipython==7.4.0
 ipython-genutils==0.2.0
